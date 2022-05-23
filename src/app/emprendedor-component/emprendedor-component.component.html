@@ -1,41 +1,39 @@
-<div class="container">
-    <h1 class="text-center">Añadir emprendedor</h1>
+<div class="container mt-4">
+  <h1 class="text-center">Añadir emprendedor</h1>
+</div>
+
+<form>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="text"
+      class="form-control border-success"
+      id="floatingInput"
+      placeholder="Nombre"
+      required
+    />
+    <label for="floatingInput">Nombre</label>
   </div>
-  
-  <form class="row g-3" action="">
-    <form>
-      <div class="form-floating col-md-4 my-3 mx-auto">
-        <input
-          type="text"
-          class="form-control border-success"
-          id="floatingInput"
-          placeholder="Nombre"
-          required
-        />
-        <label for="floatingInput">Nombre</label>
-      </div>
-      <div class="form-floating col-md-4 my-3 mx-auto">
-        <input
-          type="number"
-          class="form-control border-success"
-          id="floatingCedula"
-          placeholder="Cedula"
-          required
-        />
-        <label for="floatingCedula border-success">Cedula</label>
-      </div>
-      <div class="form-floating col-md-4 my-3 mx-auto">
-        <input
-          type="email"
-          class="form-control border-success"
-          id="floatingEmail"
-          placeholder="nombre@ejemplo.com"
-          required
-        />
-        <label for="floatingEmail">Correo electronico</label>
-      </div>
-    <div class="form-floating col-md-4 my-3 mx-auto">
-      <button type="submit" class="btn btn-success">Submit</button>
-    </div>
-  </form>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="number"
+      class="form-control border-success"
+      id="floatingCedula"
+      placeholder="Cedula"
+      required
+    />
+    <label for="floatingCedula border-success">Cedula</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="email"
+      class="form-control border-success"
+      id="floatingEmail"
+      placeholder="nombre@ejemplo.com"
+      required
+    />
+    <label for="floatingEmail">Correo electronico</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <button type="submit" class="btn btn-success">Añadir emprendedor</button>
+  </div>
 </form>
