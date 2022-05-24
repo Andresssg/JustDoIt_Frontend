@@ -27,6 +27,17 @@ export class InversionistaServicioService {
       );
   }
 
+  donar(idProyecto: string, idInversionista: string, valor: number){
+    let donacion: Object = {
+      idProyecto: idProyecto,
+      idDonante: idInversionista,
+      valor: valor,
+    };
+    this.http
+      .post(this.urlBase + 'donacion', donacion)
+      .subscribe((response) => alert(JSON.stringify(response)));
+  }
+
   getInversionistas(): Observable<any> {
     return this.http.get(this.urlBase + 'getInversionistas');
   }

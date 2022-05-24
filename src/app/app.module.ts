@@ -18,6 +18,7 @@ import { DonarComponent } from './inversionista-component/donar/donar.component'
 import { ActualizarProyectoComponent } from './proyectos-component/actualizar-proyecto/actualizar-proyecto.component';
 import { BuscarProyectoComponent } from './proyectos-component/buscar-proyecto/buscar-proyecto.component';
 import { CambiarEstadoComponent } from './proyectos-component/cambiar-estado/cambiar-estado.component';
+import { EstadisticasComponent } from './estadisticas/estadisticas.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponentComponent },
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
   { path: 'proyectos/actualizar', component: ActualizarProyectoComponent },
   { path: 'proyectos/estado', component: CambiarEstadoComponent },
   { path: 'proyectos/buscar', component: BuscarProyectoComponent },
+  { path: 'estadisticas', component: EstadisticasComponent },
   { path: '**', component: ErroresComponent },
 ];
 
@@ -54,6 +56,7 @@ const appRoutes: Routes = [
     ActualizarProyectoComponent,
     BuscarProyectoComponent,
     CambiarEstadoComponent,
+    EstadisticasComponent,
   ],
   imports: [
     BrowserModule,

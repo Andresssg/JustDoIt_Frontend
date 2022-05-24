@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h1 class="text-center">Estadísticas</h1>
+</div>
+
+<div class="container my-5 py-5 bg-black bg-opacity-25">
+  <p class="display-5 my-auto text-center">
+    Valor financiado Promedio: {{ valorFinanciadoPromedio }}
+  </p>
+</div>
+
+<table class="table">
+  <thead class="table-dark bg-black bg-opacity-75">
+    <th class="text-center fs-5">Id</th>
+    <th class="text-center fs-5">Titulo</th>
+    <th class="text-center fs-5">Valor Objetivo</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let proyecto of proyectosPublicados">
+      <td class="text-center fs-5">{{ proyecto.id }}</td>
+      <td class="text-center fs-5">{{ proyecto.titulo }}</td>
+      <td class="text-center fs-5">{{ proyecto.valorObjetivo }}</td>
+    </tr>
+  </tbody>
+</table>

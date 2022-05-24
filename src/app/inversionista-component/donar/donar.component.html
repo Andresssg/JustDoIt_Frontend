@@ -1,1 +1,48 @@
-<p>donar works!</p>
+<div class="container mt-4">
+    <h1 class="text-center">Donar a un proyecto</h1>
+  </div>
+  
+  <form>
+    <div class="form-floating col-md-4 my-3 mx-auto">
+        <input
+          type="text"
+          class="form-control border-success"
+          id="floatingId"
+          placeholder="Id proyecto"
+          required
+          name="idProyecto"
+          [(ngModel)]="idProyecto"
+        />
+        <label for="floatingId">Id proyecto</label>
+      </div>
+      <div class="form-floating col-md-4 my-3 mx-auto">
+        <input
+          type="text"
+          class="form-control border-success"
+          id="floatingIdInversionista"
+          placeholder="Id inversionista"
+          required
+          name="idInversionista"
+          [(ngModel)]="idInversionista"
+        />
+        <label for="floatingIdInversionista">Id inversionista</label>
+      </div>
+      <div class="form-floating col-md-4 my-3 mx-auto">
+        <input
+          type="number"
+          class="form-control border-success"
+          id="floatingValor"
+          placeholder="Valor a donar"
+          required
+          name="valor"
+          [(ngModel)]="valor"
+        />
+        <label for="floatingEstadoProyecto">Valor a donar</label>
+      </div>
+   
+    <div class="form-floating col-md-4 my-3 mx-auto">
+      <button type="submit" class="btn btn-success" (click)="donar()">
+        Donar
+      </button>
+    </div>
+  </form>

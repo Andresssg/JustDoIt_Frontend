@@ -31,4 +31,16 @@ export class ProyectoServicioService {
       .post(this.urlBase + 'actualizar', nuevoProyecto)
       .subscribe((response) => alert(JSON.stringify(response)));
   }
+
+  cambiarEstado(idProyecto: string, idEmprendedor: string, estado: string) {
+    let estadoProyecto: Object = {
+      idProyecto: idProyecto,
+      idEmprendedor: idEmprendedor,
+      estado: estado,
+    };
+    this.http
+      .post(this.urlBase + 'estado', estadoProyecto)
+      .subscribe((response) => alert(JSON.stringify(response)));
+  }
+
 }
