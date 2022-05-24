@@ -1,1 +1,21 @@
-<p>buscar inversionista works!</p>
+<div class="container my-4">
+    <h1 class="text-center">Inversionistas</h1>
+  </div>
+  <table class="table">
+    <thead class="table-dark bg-black bg-opacity-75">
+      <th class="text-center fs-5">Id</th>
+      <th class="text-center fs-5">Nombre</th>
+      <th class="text-center fs-5">Cedula</th>
+      <th class="text-center fs-5">Correo Electronico</th>
+      <th class="text-center fs-5">Tipo de Proyecto</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let proyecto of inversionistas">
+        <td class="text-center fs-5">{{ proyecto.id }}</td>
+        <td class="text-center fs-5">{{ proyecto.nombre }}</td>
+        <td class="text-center fs-5">{{ proyecto.cedula }}</td>
+        <td class="text-center fs-5">{{ proyecto.correoElectronico }}</td>
+        <td class="text-center fs-5">{{ proyecto.tipoDeProyecto }}</td>
+      </tr>
+    </tbody>
+  </table>

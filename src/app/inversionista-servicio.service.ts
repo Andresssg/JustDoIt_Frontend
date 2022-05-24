@@ -39,6 +39,6 @@ export class InversionistaServicioService {
   }
 
   getInversionistas(): Observable<any> {
-    return this.http.get(this.urlBase + 'getInversionistas');
+    return this.http.get(this.urlBase + 'getDonantes');
   }
 }

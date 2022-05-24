@@ -1,1 +1,19 @@
-<p>buscar-emprendedor works!</p>
+<div class="container my-4">
+  <h1 class="text-center">Emprendedores</h1>
+</div>
+<table class="table">
+  <thead class="table-dark bg-black bg-opacity-75">
+    <th class="text-center fs-5">Id</th>
+    <th class="text-center fs-5">Nombre</th>
+    <th class="text-center fs-5">Cedula</th>
+    <th class="text-center fs-5">Correo Electronico</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let proyecto of emprendedores">
+      <td class="text-center fs-5">{{ proyecto.id }}</td>
+      <td class="text-center fs-5">{{ proyecto.nombre }}</td>
+      <td class="text-center fs-5">{{ proyecto.cedula }}</td>
+      <td class="text-center fs-5">{{ proyecto.correoElectronico }}</td>
+    </tr>
+  </tbody>
+</table>
