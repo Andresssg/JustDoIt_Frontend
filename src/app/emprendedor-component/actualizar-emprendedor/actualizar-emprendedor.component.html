@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <h1 class="text-center">Actualizar emprendedor</h1>
+  </div>
+  
+  <form>
+    <div class="form-floating col-md-4 my-3 mx-auto">
+      <input
+        type="text"
+        class="form-control border-success"
+        id="floatingInput"
+        placeholder="Nombre"
+        required
+        name="nombre"
+        [(ngModel)]="nombre"
+      />
+      <label for="floatingInput">Nombre</label>
+    </div>
+    <div class="form-floating col-md-4 my-3 mx-auto">
+      <input
+        type="number"
+        class="form-control border-success"
+        id="floatingCedula"
+        placeholder="Cedula"
+        required
+        name="cedula"
+        [(ngModel)]="cedula"
+      />
+      <label for="floatingCedula border-success">Cedula</label>
+    </div>
+    <div class="form-floating col-md-4 my-3 mx-auto">
+      <input
+        type="email"
+        class="form-control border-success"
+        id="floatingEmail"
+        placeholder="nombre@ejemplo.com"
+        required
+        name="correo"
+        [(ngModel)]="correo"
+      />
+      <label for="floatingEmail">Correo electronico</label>
+    </div>
+    <div class="form-floating col-md-4 my-3 mx-auto">
+      <button type="submit" class="btn btn-success" (click)="actualizarEmprendedor()">Actualizar emprendedor</button>
+    </div>
+  </form>

@@ -1,7 +1,13 @@
 export class Inversionista {
-  id: string;
   nombre: string;
-  correo: string;
+  correoElectronico: string;
   cedula: number;
-  tipoProyecto: string;
+  tipoDeProyecto: string;
+
+  constructor(nombre: string, cedula: number, correo: string, tipo: string) {
+    this.nombre = nombre;
+    this.correoElectronico = correo;
+    this.cedula = cedula;
+    this.tipoDeProyecto = tipo;
+  }
 }

@@ -10,6 +10,8 @@
       id="floatingInput"
       placeholder="Nombre"
       required
+      name="nombre"
+      [(ngModel)]="nombre"
     />
     <label for="floatingInput">Nombre</label>
   </div>
@@ -20,6 +22,8 @@
       id="floatingCedula"
       placeholder="Cedula"
       required
+      name="cedula"
+      [(ngModel)]="cedula"
     />
     <label for="floatingCedula">Cedula</label>
   </div>
@@ -30,6 +34,8 @@
       id="floatingEmail"
       placeholder="nombre@ejemplo.com"
       required
+      name="correoElectronico"
+      [(ngModel)]="correoElectronico"
     />
     <label for="floatingEmail">Correo electronico</label>
   </div>
@@ -40,10 +46,12 @@
       id="floatingTipo"
       placeholder="nombre@ejemplo.com"
       required
+      name="tipoDeProyecto"
+      [(ngModel)]="tipoDeProyecto"
     />
     <label for="floatingTipo">Tipo de proyectos</label>
   </div>
   <div class="form-floating col-md-4 my-3 mx-auto">
-    <button type="submit" class="btn btn-success">Añadir inversionista</button>
+    <button type="submit" class="btn btn-success" (click)="agregarInversionista()">Añadir inversionista</button>
   </div>
 </form>

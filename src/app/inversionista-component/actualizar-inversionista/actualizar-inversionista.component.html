@@ -1,5 +1,5 @@
 <div class="container mt-4">
-  <h1 class="text-center">Añadir emprendedor</h1>
+  <h1 class="text-center">Actualizar inversionista</h1>
 </div>
 
 <form>
@@ -11,7 +11,6 @@
       placeholder="Nombre"
       required
       name="nombre"
-      
       [(ngModel)]="nombre"
     />
     <label for="floatingInput">Nombre</label>
@@ -26,7 +25,7 @@
       name="cedula"
       [(ngModel)]="cedula"
     />
-    <label for="floatingCedula border-success">Cedula</label>
+    <label for="floatingCedula">Cedula</label>
   </div>
   <div class="form-floating col-md-4 my-3 mx-auto">
     <input
@@ -35,12 +34,24 @@
       id="floatingEmail"
       placeholder="nombre@ejemplo.com"
       required
-      name="correo"
-      [(ngModel)]="correo"
+      name="correoElectronico"
+      [(ngModel)]="correoElectronico"
     />
     <label for="floatingEmail">Correo electronico</label>
   </div>
   <div class="form-floating col-md-4 my-3 mx-auto">
-    <button type="submit" class="btn btn-success" (click)="agregarEmprendedor()">Añadir emprendedor</button>
+    <input
+      type="text"
+      class="form-control border-success"
+      id="floatingTipo"
+      placeholder="nombre@ejemplo.com"
+      required
+      name="tipoDeProyecto"
+      [(ngModel)]="tipoDeProyecto"
+    />
+    <label for="floatingTipo">Tipo de proyectos</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <button type="submit" class="btn btn-success" (click)="actualizarInversionista()">Añadir inversionista</button>
   </div>
 </form>

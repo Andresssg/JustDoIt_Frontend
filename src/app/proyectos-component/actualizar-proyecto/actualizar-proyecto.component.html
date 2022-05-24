@@ -1,0 +1,59 @@
+<div class="container mt-4">
+    <h1 class="text-center">Crear Proyecto</h1>
+  </div>
+  
+  <form>
+    <div class="form-floating col-md-4 my-3 mx-auto">
+        <input
+          type="text"
+          class="form-control border-success"
+          id="floatingId"
+          placeholder="Id"
+          required
+          name="id"
+          [(ngModel)]="id"
+        />
+        <label for="floatingTitulo">Id proyecto</label>
+      </div>
+    <div class="form-floating col-md-4 my-3 mx-auto">
+      <input
+        type="text"
+        class="form-control border-success"
+        id="floatingTitulo"
+        placeholder="Titulo"
+        required
+        name="titulo"
+        [(ngModel)]="titulo"
+      />
+      <label for="floatingTitulo">Titulo</label>
+    </div>
+    <div class="form-floating col-md-4 my-3 mx-auto">
+      <textarea
+        class="form-control border-success"
+        id="floatingDescripcion"
+        style="height: 200px"
+        required
+        name="descripcion"
+        [(ngModel)]="descripcion"
+      ></textarea>
+      <label for="floatingDescripcion">Descripcion</label>
+    </div>
+    <div class="form-floating col-md-4 my-3 mx-auto">
+        <input
+          type="text"
+          class="form-control border-success"
+          id="floatingTipo"
+          placeholder="nombre@ejemplo.com"
+          required
+          name="tipoDeProyecto"
+          [(ngModel)]="tipoDeProyecto"
+        />
+        <label for="floatingTipo">Tipo de proyecto</label>
+      </div>
+    <div class="form-floating col-md-4 my-3 mx-auto">
+      <button type="submit" class="btn btn-success" (click)="actualizarProyecto()">
+        Actualiza proyecto
+      </button>
+    </div>
+  </form>
+  

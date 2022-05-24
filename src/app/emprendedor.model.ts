@@ -1,6 +1,11 @@
 export class Emprendedor {
-  id: string;
   nombre: string;
-  correo: string;
+  correoElectronico: string;
   cedula: number;
+
+  constructor(nombre:string, correo:string,cedula:number){
+    this.nombre=nombre;
+    this.correoElectronico = correo;
+    this.cedula = cedula;
+  }
 }

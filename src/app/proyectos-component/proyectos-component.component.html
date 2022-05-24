@@ -1,1 +1,82 @@
-<p>proyectos-component works!</p>
+<div class="container mt-4">
+  <h1 class="text-center">Crear Proyecto</h1>
+</div>
+
+<form>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="text"
+      class="form-control border-success"
+      id="floatingTitulo"
+      placeholder="Titulo"
+      required
+      name="titulo"
+      [(ngModel)]="titulo"
+    />
+    <label for="floatingTitulo">Titulo</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <textarea
+      class="form-control border-success"
+      id="floatingDescripcion"
+      style="height: 200px"
+      required
+      name="descripcion"
+      [(ngModel)]="descripcion"
+    ></textarea>
+    <label for="floatingDescripcion">Descripcion</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="text"
+      class="form-control border-success"
+      id="floatingTipo"
+      placeholder="nombre@ejemplo.com"
+      required
+      name="tipoDeProyecto"
+      [(ngModel)]="tipoDeProyecto"
+    />
+    <label for="floatingTipo">Tipo de proyecto</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="number"
+      class="form-control border-success"
+      id="floatingCedula"
+      placeholder="cedula"
+      required
+      name="cedulaEmprendedor"
+      [(ngModel)]="cedulaEmprendedor"
+    />
+    <label for="floatingCedula">Cedula emprendedor</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="number"
+      class="form-control border-success"
+      id="floatingValor"
+      placeholder="$10000"
+      required
+      name="valorObjetivo"
+      [(ngModel)]="valorObjetivo"
+    />
+    <label for="floatingValor">Valor objetivo</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="number"
+      class="form-control border-success"
+      id="floatingFecha"
+      placeholder="(yyyy-mm-dd)"
+      required
+      name="floatingFecha"
+      [(ngModel)]="fechaFinal"
+    />
+    <label for="floatingFecha">Fecha final (yyyy-mm-dd)</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <button type="submit" class="btn btn-success" (click)="crearProyecto()">
+      Crear proyecto
+    </button>
+  </div>
+</form>
