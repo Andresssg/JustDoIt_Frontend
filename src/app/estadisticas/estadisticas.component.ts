@@ -9,6 +9,7 @@ import { EstadisticasServicioService } from '../estadisticas-servicio.service';
 export class EstadisticasComponent implements OnInit {
   valorFinanciadoPromedio: number;
   proyectosPublicados: any[];
+  cantidadProyectosPublicados:number;
 
   constructor(private estadisticasServicio: EstadisticasServicioService) {}
 
@@ -28,6 +29,7 @@ export class EstadisticasComponent implements OnInit {
   getProyectosPublicados() {
     this.estadisticasServicio.getProyectosPublicados().subscribe((response) => {
       this.proyectosPublicados = JSON.parse(JSON.stringify(response));
+      this.cantidadProyectosPublicados = this.proyectosPublicados.length;
     });
   }
 }

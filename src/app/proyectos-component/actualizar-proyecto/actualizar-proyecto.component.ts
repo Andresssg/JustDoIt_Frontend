@@ -21,6 +21,6 @@ export class ActualizarProyectoComponent implements OnInit {
 
   actualizarProyecto(){
     this.proyectoService.actualizarProyecto(this.id,this.titulo,this.descripcion,this.tipoDeProyecto)
-    this.router.navigate(['/proyecto/buscar'])
+    this.router.navigate(['/proyectos/buscar'])
   }
 }

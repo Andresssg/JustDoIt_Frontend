@@ -33,6 +33,6 @@ export class ProyectosComponentComponent implements OnInit {
       this.tipoDeProyecto
     );
     this.proyectoService.crearProyecto(proyecto);
-    this.router.navigate(['/proyecto/buscar'])
+    this.router.navigate(['/proyectos/buscar'])
   }
 }
