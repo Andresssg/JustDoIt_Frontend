@@ -8,4 +8,5 @@ export class Emprendedor {
     this.correoElectronico = correo;
     this.cedula = cedula;
   }
+
 }

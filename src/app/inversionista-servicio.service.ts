@@ -41,4 +41,8 @@ export class InversionistaServicioService {
   getInversionistas(): Observable<any> {
     return this.http.get(this.urlBase + 'getDonantes');
   }
+
+  buscarInversionista(cedulaInversionista: number): Observable<any> {
+    return this.http.get(this.urlBase + cedulaInversionista);
+  }
 }

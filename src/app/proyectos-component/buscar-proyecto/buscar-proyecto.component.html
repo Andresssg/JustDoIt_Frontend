@@ -1,1 +1,56 @@
-<p>buscar-proyecto works!</p>
+<div class="container mt-4">
+  <h1 class="text-center">Buscar Proyecto</h1>
+</div>
+
+<form>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="text"
+      class="form-control border-success"
+      id="floatingCedula"
+      placeholder="Cedula Emprendedor"
+      required
+      name="cedulaEmprendedor"
+      [(ngModel)]="cedulaEmprendedor"
+    />
+    <label for="floatingCedula">Cedula Emprendedor</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <button type="submit" class="btn btn-success" (click)="buscarProyectos()">
+      Buscar proyecto
+    </button>
+  </div>
+</form>
+<div class="container my-4">
+  <h1 class="text-center">Proyectos</h1>
+</div>
+<div *ngIf="sinProyectos; else proyectosEncontrados">
+  <p class="text-center display-6">No se han encontrado proyectos asociados!</p>
+</div>
+<ng-template #proyectosEncontrados>
+  <table class="table">
+    <thead class="table-dark bg-black bg-opacity-75">
+      <th class="text-center fs-5">Id Proyecto</th>
+      <th class="text-center fs-5">Id Emprendedor</th>
+      <th class="text-center fs-5">Titulo</th>
+      <th class="text-center fs-5">Estado</th>
+      <th class="text-center fs-5">Valor Objetivo</th>
+      <th class="text-center fs-5">Valor Actual</th>
+      <th class="text-center fs-5">Tipo Proyecto</th>
+      <th class="text-center fs-5">Descripcion</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let proyecto of proyectos">
+        <td class="text-center fs-5">{{ proyecto.id }}</td>
+        <td class="text-center fs-5">{{ proyecto.emprendedor_id }}</td>
+        <td class="text-center fs-5">{{ proyecto.titulo }}</td>
+        <td class="text-center fs-5">{{ proyecto.estado }}</td>
+        <td class="text-center fs-5">{{ proyecto.valorObjetivo }}</td>
+        <td class="text-center fs-5">{{ proyecto.valorActual }}</td>
+        <td class="text-center fs-5">{{ proyecto.tipoDeProyecto }}</td>
+        <td class="text-center fs-5">{{ proyecto.descripcion }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</ng-template>

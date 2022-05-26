@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Proyecto } from './proyecto.model';
 
 @Injectable({
@@ -41,6 +42,10 @@ export class ProyectoServicioService {
     this.http
       .post(this.urlBase + 'estado', estadoProyecto)
       .subscribe((response) => alert(JSON.stringify(response)));
+  }
+
+  buscarProyectos(cedulaEmprendedor:number):Observable<any>{
+    return this.http.get(this.urlBase + "getproyectos/" + cedulaEmprendedor)
   }
 
 }

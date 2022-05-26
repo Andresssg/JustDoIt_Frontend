@@ -1,19 +1,56 @@
 <div class="container my-4">
   <h1 class="text-center">Emprendedores</h1>
 </div>
-<table class="table">
-  <thead class="table-dark bg-black bg-opacity-75">
-    <th class="text-center fs-5">Id</th>
-    <th class="text-center fs-5">Nombre</th>
-    <th class="text-center fs-5">Cedula</th>
-    <th class="text-center fs-5">Correo Electronico</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let proyecto of emprendedores">
-      <td class="text-center fs-5">{{ proyecto.id }}</td>
-      <td class="text-center fs-5">{{ proyecto.nombre }}</td>
-      <td class="text-center fs-5">{{ proyecto.cedula }}</td>
-      <td class="text-center fs-5">{{ proyecto.correoElectronico }}</td>
-    </tr>
-  </tbody>
-</table>
+<form>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="number"
+      class="form-control border-success"
+      id="floatingCedula"
+      placeholder="Cedula Emprendedor"
+      required
+      name="cedulaEmprendedor"
+      [(ngModel)]="cedulaEmprendedor"
+    />
+    <label for="floatingCedula">Cedula Emprendedor</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto row">
+    <button
+      type="submit"
+      class="btn btn-success col me-2 py-3"
+      (click)="buscarEmprendedor()"
+    >
+      Buscar emprendedor
+    </button>
+    <button
+      type="submit"
+      class="btn btn-success col ms-2"
+      (click)="getEmprendedores()"
+    >
+      Buscar todos los emprendedores
+    </button>
+  </div>
+</form>
+<div *ngIf="!emprendedorEncontrado; else emprendedoresTabla">
+  <p class="text-center display-6">
+    No se ha encontrado ningún emprendedor asociado a ese número de cedula!
+  </p>
+</div>
+<ng-template #emprendedoresTabla>
+  <table class="table">
+    <thead class="table-dark bg-black bg-opacity-75">
+      <th class="text-center fs-5">Id</th>
+      <th class="text-center fs-5">Nombre</th>
+      <th class="text-center fs-5">Cedula</th>
+      <th class="text-center fs-5">Correo Electronico</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emprendedor of emprendedores">
+        <td class="text-center fs-5">{{ emprendedor.id }}</td>
+        <td class="text-center fs-5">{{ emprendedor.nombre }}</td>
+        <td class="text-center fs-5">{{ emprendedor.cedula }}</td>
+        <td class="text-center fs-5">{{ emprendedor.correoElectronico }}</td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>

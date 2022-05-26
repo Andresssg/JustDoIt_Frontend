@@ -1,6 +1,42 @@
 <div class="container my-4">
-    <h1 class="text-center">Inversionistas</h1>
+  <h1 class="text-center">Inversionistas</h1>
+</div>
+<form>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="number"
+      class="form-control border-success"
+      id="floatingCedula"
+      placeholder="Cedula Inversionista"
+      required
+      name="cedulaInversionista"
+      [(ngModel)]="cedulaInversionista"
+    />
+    <label for="floatingCedula">Cedula Inversionista</label>
   </div>
+  <div class="form-floating col-md-4 my-3 mx-auto row">
+    <button
+      type="submit"
+      class="btn btn-success col me-2 py-3"
+      (click)="buscarInversionista()"
+    >
+      Buscar inversionista
+    </button>
+    <button
+      type="submit"
+      class="btn btn-success col ms-2"
+      (click)="getInversionistas()"
+    >
+      Buscar todos los inversionistas
+    </button>
+  </div>
+</form>
+<div *ngIf="!inversionistaEncontrado; else inversionistasTabla">
+  <p class="text-center display-6">
+    No se ha encontrado ningún inversionista asociado a ese número de cedula!
+  </p>
+</div>
+<ng-template #inversionistasTabla>
   <table class="table">
     <thead class="table-dark bg-black bg-opacity-75">
       <th class="text-center fs-5">Id</th>
@@ -10,12 +46,13 @@
       <th class="text-center fs-5">Tipo de Proyecto</th>
     </thead>
     <tbody>
-      <tr *ngFor="let proyecto of inversionistas">
-        <td class="text-center fs-5">{{ proyecto.id }}</td>
-        <td class="text-center fs-5">{{ proyecto.nombre }}</td>
-        <td class="text-center fs-5">{{ proyecto.cedula }}</td>
-        <td class="text-center fs-5">{{ proyecto.correoElectronico }}</td>
-        <td class="text-center fs-5">{{ proyecto.tipoDeProyecto }}</td>
+      <tr *ngFor="let inversionista of inversionistas">
+        <td class="text-center fs-5">{{ inversionista.id }}</td>
+        <td class="text-center fs-5">{{ inversionista.nombre }}</td>
+        <td class="text-center fs-5">{{ inversionista.cedula }}</td>
+        <td class="text-center fs-5">{{ inversionista.correoElectronico }}</td>
+        <td class="text-center fs-5">{{ inversionista.tipoDeProyecto }}</td>
       </tr>
     </tbody>
   </table>
+</ng-template>

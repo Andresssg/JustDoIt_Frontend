@@ -23,12 +23,14 @@ export class EmprendedorServicioService {
   actualizarEmprendedor(emprendedor: Emprendedor) {
     this.http
       .post(this.urlBase + 'actualizar', emprendedor)
-      .subscribe((response) =>
-        alert(JSON.stringify(response))
-      );
+      .subscribe((response) => alert(JSON.stringify(response)));
   }
 
   getEmprendedores(): Observable<any> {
     return this.http.get(this.urlBase + 'getEmprendedores');
+  }
+
+  buscarEmprendedor(cedulaEmprendedor: number): Observable<any> {
+    return this.http.get(this.urlBase + cedulaEmprendedor);
   }
 }
