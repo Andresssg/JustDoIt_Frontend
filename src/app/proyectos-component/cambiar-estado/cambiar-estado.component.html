@@ -1,49 +1,49 @@
 <div class="container mt-4">
-    <h1 class="text-center">Cambiar estado</h1>
+  <h1 class="text-center">Cambiar estado</h1>
+</div>
+
+<form>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="text"
+      class="form-control border-success"
+      id="floatingId"
+      placeholder="Id proyecto"
+      required
+      name="idProyecto"
+      [(ngModel)]="idProyecto"
+    />
+    <label for="floatingId">Id proyecto</label>
   </div>
-  
-  <form>
-    <div class="form-floating col-md-4 my-3 mx-auto">
-        <input
-          type="text"
-          class="form-control border-success"
-          id="floatingId"
-          placeholder="Id proyecto"
-          required
-          name="idProyecto"
-          [(ngModel)]="idProyecto"
-        />
-        <label for="floatingId">Id proyecto</label>
-      </div>
-      <div class="form-floating col-md-4 my-3 mx-auto">
-        <input
-          type="text"
-          class="form-control border-success"
-          id="floatingIdEmprendedor"
-          placeholder="Id emprendedor"
-          required
-          name="idEmprendedor"
-          [(ngModel)]="idEmprendedor"
-        />
-        <label for="floatingIdEmprendedor">Id emprendedor</label>
-      </div>
-      <div class="form-floating col-md-4 my-3 mx-auto">
-        <input
-          type="text"
-          class="form-control border-success"
-          id="floatingEstadoProyecto"
-          placeholder="Estado proyecto"
-          required
-          name="estadoProyecto"
-          [(ngModel)]="estadoProyecto"
-        />
-        <label for="floatingEstadoProyecto">Estado del proyecto</label>
-      </div>
-   
-    <div class="form-floating col-md-4 my-3 mx-auto">
-      <button type="submit" class="btn btn-success" (click)="cambiarEstado()">
-        Cambiar estado
-      </button>
-    </div>
-  </form>
-  
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <input
+      type="text"
+      class="form-control border-success"
+      id="floatingIdEmprendedor"
+      placeholder="Id emprendedor"
+      required
+      name="idEmprendedor"
+      [(ngModel)]="idEmprendedor"
+    />
+    <label for="floatingIdEmprendedor">Id emprendedor</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <select
+      class="form-select border-success"
+      id="floatingEstadoProyecto"
+      aria-label="Floating label select example"
+      required
+      name="estadoProyecto"
+      [(ngModel)]="estadoProyecto"
+    >
+      <option value="EN PROCESO">EN PROCESO</option>
+      <option value="CERRADO">CERRADO</option>
+    </select>
+    <label for="floatingEstadoProyecto">Estado del proyecto</label>
+  </div>
+  <div class="form-floating col-md-4 my-3 mx-auto">
+    <button type="submit" class="btn btn-success" (click)="cambiarEstado()">
+      Cambiar estado
+    </button>
+  </div>
+</form>
